@@ -8,12 +8,11 @@
 #include <iostream>
 #include <math.h>
 
-
-
 static bool isPrime(int number)
 {
 	//if (number < 2) return false;
 	//if (number % 2 == 0) return (number == 2);
+	// more info on why we only need to check to sqrt(number): https://stackoverflow.com/questions/5811151/why-do-we-check-up-to-the-square-root-of-a-prime-number-to-determine-if-it-is-pr
 	double root = sqrt(number);
 	for (int i = 3; i <= root; i += 2)
 	{
@@ -21,7 +20,6 @@ static bool isPrime(int number)
 	}
 	return true;
 }
-
 
 int main() {
 
@@ -31,9 +29,7 @@ int main() {
 
 	while (checkNum < 2000000) {
 		if (isPrime(checkNum)) {
-			//std::cout << "-- #" << primeCounter << " --> " << checkNum << " is PRIME!" << std::endl;
 			bigSum += checkNum;
-			//std::cout << "bigSum = " << bigSum << std::endl;
 			primeCounter += 1;
 		}
 		checkNum += 2;
@@ -42,7 +38,7 @@ int main() {
 	std::cout << "\n";
 	std::cout << "bigSum: " << bigSum << std::endl;
 
-	std::cin.get();
+	std::cin.get(); // just to pause
 	return 0;
 }
 
