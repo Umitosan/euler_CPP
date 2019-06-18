@@ -183,13 +183,13 @@ int main() {
 	std::cout << "Diag left product = " << pDL << std::endl;
 	std::cout << "\nLARGEST PRODUCT = " << bigProd << std::endl;
 
-	//Vert product = 51267216
-	//Horiz product = 48477312
-	//Diag right product = 40304286
-	//Diag left product = 70600674
-
-	//LARGEST PRODUCT = 70600674
-
 	std::cin.get();
 	return 0;
 }
+
+//Vert product = 51267216
+//Horiz product = 48477312
+//Diag right product = 40304286
+//Diag left product = 70600674
+
+//LARGEST PRODUCT = 70600674
